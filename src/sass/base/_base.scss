@@ -1,0 +1,50 @@
+@use '../abstracts'as *;
+
+body {
+  color: $default;
+  font-size: fluid(16, 18, 320, medium);
+  font-family: "Inter", sans-serif;
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $dark;
+}
+
+.container {
+  width: min(100% - 3rem, rem(1200));
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.title {
+  font-size: fluid(24, 48, tiny, large);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+
+  span {
+    color: $primary;
+  }
+}
+
+.section {
+  padding: fluid(75, 150, tiny, large) 0;
+
+  &__title {
+    margin-bottom: fluid(50, 150, tiny, large);
+  }
+}

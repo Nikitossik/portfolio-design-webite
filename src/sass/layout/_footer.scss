@@ -1,0 +1,36 @@
+@use '../abstracts'as *;
+
+.footer {
+    background-color: $secondary;
+    padding: fluid(30, 110, tiny, large) 0;
+
+
+    &__title {
+        font-weight: 500;
+        color: #374151;
+        margin-bottom: rem(20);
+    }
+
+    &__text {
+        text-align: center;
+        margin: 0 auto fluid(30, 100, tiny, large);
+        max-width: 60ch;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: fluid(20, 50, tiny, large);
+    }
+
+    &__social-link {
+        font-size: fluid(24, 35, tiny, large);
+        color: $default;
+        transition: 0.3s color ease;
+
+        @include on-event {
+            color: $primary;
+        }
+    }
+
+}

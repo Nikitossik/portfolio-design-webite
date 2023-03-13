@@ -1,0 +1,21 @@
+@use '../abstracts'as *;
+
+.trusted-by {
+    background-color: $secondary;
+
+    &__sub-text {
+        margin-bottom: rem(20);
+        line-height: 1.4;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: rem(35) fluid(40, 100, tiny, large);
+    }
+
+    &__image {
+        flex: 0 1 rem(156);
+    }
+}

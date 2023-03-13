@@ -1,0 +1,78 @@
+@use "../abstracts/"as *;
+
+.header {
+    padding: fluid(40, 87, small, large) 0;
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        flex: 0 0 rem(62);
+        padding-right: rem(10);
+        position: relative;
+        z-index: 100;
+        margin-right: auto;
+    }
+
+    &__button {
+        z-index: 100;
+    }
+
+    &__burger {
+        flex: 0 0 rem(40);
+        height: rem(30);
+        z-index: 100;
+        margin-left: rem(20);
+
+        position: relative;
+
+        &::before,
+        &::after,
+        & span {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: rem(4);
+            background-color: $primary;
+            transition: .3s transform ease;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        & span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @include up(small) {
+            display: none;
+        }
+    }
+
+    &__burger--active {
+        &::before {
+            top: 50%;
+            transform: rotate(45deg);
+            background-color: #fff;
+        }
+
+        &::after {
+            top: 50%;
+            transform: rotate(-45deg);
+            background-color: #fff;
+        }
+
+        & span {
+            transform: scaleX(0);
+            background-color: #fff;
+        }
+    }
+}

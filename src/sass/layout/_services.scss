@@ -1,0 +1,32 @@
+@use '../abstracts'as *;
+
+.services {
+    &__container {
+        width: min(100% - 3rem, rem(1248));
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(40) fluid(40, 80, small, large);
+    }
+
+    &-item {
+        text-align: center;
+        flex: 0 1 rem(360)
+    }
+
+    &-item__image {
+        display: flex;
+        justify-content: center;
+        margin-bottom: fluid(25, 40, small, large);
+    }
+
+    &-item__title {
+        font-weight: 600;
+        font-size: fluid(24, 30, tiny, large);
+        line-height: 1.2;
+        margin-bottom: rem(20);
+    }
+}

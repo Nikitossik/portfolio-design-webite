@@ -1,0 +1,16 @@
+$primary: #3730A3;
+$secondary: #FEF2F2;
+$dark: #1F2937;
+$default: #6B7280;
+
+$breakpoints-up: ('tiny': 480, //480px
+  'small': 768, //768px
+  'medium': 1024, //1024px
+  'large': 1200 //1200px
+);
+
+$breakpoints-down: ('tiny': 2479, //479px
+  'small': 767, //767px
+  'medium': 1023, //1023px
+  'large': 1199 //1199
+);

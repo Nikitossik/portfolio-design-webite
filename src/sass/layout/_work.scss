@@ -1,0 +1,61 @@
+@use '../abstracts'as *;
+
+.work {
+    &__body {
+        display: grid;
+        align-items: center;
+
+        @include up(small) {
+            grid-template-columns: 37% 63%;
+        }
+    }
+
+    &__image {
+        width: max(20rem, 60%);
+        justify-self: center;
+
+        @include up(small) {
+            width: auto;
+            grid-column: 1;
+            grid-row: 1;
+        }
+    }
+
+    &__items {
+        padding-bottom: rem(50);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+        grid-gap: fluid(30, 68, small, large);
+
+        @include up(small) {
+            padding-block: fluid(20, 45, small, large);
+            padding-left: fluid(20, 50, small, large);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &-item {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-gap: fluid(12, 20, small, large);
+    }
+
+    &-item__title {
+        font-size: rem(18);
+    }
+
+    &-item__text,
+    &-item__link {
+        line-height: 1.3;
+        font-size: rem(12);
+    }
+
+    &-item__link {
+        font-weight: 500;
+        color: $primary;
+        display: flex;
+        align-items: center;
+        column-gap: rem(5);
+    }
+}

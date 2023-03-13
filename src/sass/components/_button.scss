@@ -1,0 +1,29 @@
+@use '../abstracts'as *;
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    background-color: $primary;
+    border-radius: rem(6);
+    border: 1px solid $primary;
+    padding: fluid(8, 12, small, medium) fluid(24, 32, small, medium);
+    transition: 500ms background-color ease,
+        500ms color ease;
+
+    @include on-event() {
+        background-color: #fff;
+        color: $primary;
+    }
+
+    &--outlined {
+        background-color: #fff;
+        color: $primary;
+
+        @include on-event() {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}
